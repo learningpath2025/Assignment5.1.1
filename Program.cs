@@ -42,6 +42,8 @@ namespace Assignment5._1._1
         //Using Linq converting to string
         static bool IsPalindrome1(int x)
         {
+            if (x < 0) return false;
+
             string s = x.ToString();
             return s.Where(Char.IsLetterOrDigit).Take(s.Length / 2)
                 .SequenceEqual(s.Reverse().Where(Char.IsLetterOrDigit).Take(s.Length / 2));
